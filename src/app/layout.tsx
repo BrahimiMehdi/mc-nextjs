@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +16,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex flex-col items-center`}>
+        <header className="h-14 w-full max-w-4xl py-2 items-center flex justify-evenly">
+          <Link href={"/ssr"}>
+            SSR
+          </Link>
+          <Link href={"/ssr-stream"}>
+            ssr-streaming
+          </Link>
+          <Link href={"/ssg"}>
+            SSG
+          </Link>
+          <Link href={"/isr"}>
+            ISR
+          </Link>
+          
+        </header>
+        {children}
+        </body>
     </html>
   );
 }
