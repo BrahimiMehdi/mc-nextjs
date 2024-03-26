@@ -1,7 +1,7 @@
 export const revalidate = 60;
 import Content from "../Content";
 
-export default function Home() {
+export default function ISR() {
     
   return (
     <main className="flex min-h-screen flex-col items-center gap-y-8 p-24">
