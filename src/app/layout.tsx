@@ -18,16 +18,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} flex flex-col items-center`}>
         <header className="h-14 w-full max-w-4xl py-2 items-center flex justify-evenly">
-          <Link href={"/ssr"}>
+          <Link className="active:text-green-600" href={"/ssr"}>
             SSR
           </Link>
-          <Link href={"/ssr-stream"}>
+          <Link className="active:text-green-600" href={"/ssr-stream"}>
             ssr-streaming
           </Link>
-          <Link href={"/ssg"}>
+          <Link className="active:text-green-600" href={"/ssg"}>
             SSG
           </Link>
-          <Link href={"/isr"}>
+          <Link className="active:text-green-600" href={"/isr"}>
             ISR
           </Link>
           
